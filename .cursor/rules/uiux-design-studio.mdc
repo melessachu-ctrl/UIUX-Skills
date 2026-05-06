@@ -1,0 +1,25 @@
+---
+description: "此專案的 UI/UX 與品牌特例（搭配 uiux-design-studio Skill 使用）。只放專案差異，不複製整份流程。"
+---
+
+## 使用方式
+
+- 當你在本專案做 UI/UX 設計、評審、Figma 交付、或 Design System 補洞時，讓「設計總監（uiux-design-studio）」在 intake/routing 後**優先遵守本規則**。
+- 這份規則只放「本專案特例」：品牌、元件庫、路由/IA、內容語氣、a11y 底線、設計 token 命名等。
+
+## 本專案特例（請依專案填寫）
+
+- **產品一句話**：TODO
+- **目標使用者**：TODO
+- **平台**：Web / iOS / Android / Desktop（擇一或多）
+- **品牌語氣（microcopy）**：例如「專業、簡潔、偏工程師」/「溫暖、鼓勵、偏新手」
+- **資訊架構/路由**：例如 `/settings`, `/billing`, `/admin/...`（列出關鍵 5–10 個）
+- **元件庫/技術棧**：例如 React + Tailwind + shadcn/ui（或自研 DS）
+- **設計系統 token 來源**：例如 CSS variables、Tailwind theme、design-tokens 套件（若未知填「待盤點」）
+
+## 不可違反（Guardrails）
+
+- **a11y**：最少維持可鍵盤操作、可見 focus、表單有 label、互動元件有可讀名稱
+- **一致性**：新增元件前先找既有元件/樣式；優先擴展而非發明新模式
+- **狀態**：關鍵流程至少包含 Loading / Error / Empty（若適用）/ Success
+
