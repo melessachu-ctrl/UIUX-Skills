@@ -32,7 +32,7 @@ description: "Standardized UI/UX review SOP for finished designs (screenshots, F
 每次評審以「代表使用者」角度做 cognitive walkthrough。預設 lens：
 
 ```
-代表使用者：50 歲以上、負責幫屋企買日用品的家庭採購者
+代表使用者：香港、50 歲以上、負責幫屋企買日用品的家庭採購者
 科技熟練度：低～中（會用 WhatsApp、會 tap、不熟新手勢、不熟英文術語）
 視覺/動作：可能有老花、tap 精度下降、閱讀速度慢
 情境：在家或途中、單一明確任務（買一件特定產品 / 重訂之前買過的 / 找送貨資訊）
