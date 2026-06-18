@@ -1,6 +1,6 @@
 ---
 name: uiux-design-studio
-description: "（第三人稱）在 Cursor 內以「單一對話編排＋虛擬角色」方式擔任 Design Director / 設計總監，將 UI/UX 工作拆成 intake → routing → 各角色輸出 → 最終統稿。適用於：新頁面/新功能設計、改版/視覺升級、UX 流程/使用者旅程/IA、可用性與無障礙（a11y/WCAG）、設計評審（design/code/prototype）、Figma 交付（screens/components/prototype）、Design System / token / component library 補洞或更新、Figma 檔案治理／cleanup（圖層／命名／舊檔 SOP）。會引導載入 `ui-ux-pro-max`（規範與品質）、`frontend-design`（視覺與實作導向）、以及 Figma 相關技能（figma-file-cleanup / figma-implement-design / figma-mcp-server-guide）。"
+description: "（第三人稱）在 Cursor 內以「單一對話編排＋虛擬角色」方式擔任 Design Director / 設計總監，將 UI/UX 工作拆成 intake → routing → 各角色輸出 → 最終統稿。適用於：新頁面/新功能設計、改版/視覺升級、UX 流程/使用者旅程/IA、可用性與無障礙（a11y/WCAG）、設計評審（design/code/prototype）、Figma 交付（screens/components/prototype）、Design System / token / component library 補洞或更新、Figma 檔案治理／cleanup（圖層／命名／舊檔 SOP）。會引導載入 `ricky-design-guideline`（HKTVmall 設計原則）、`ui-ux-pro-max`（規範與品質）、`frontend-design`（視覺與實作導向）、以及 Figma 相關技能（figma-file-cleanup / figma-implement-design / figma-mcp-server-guide）。"
 ---
 
 ## 平台現實（必讀）
@@ -52,7 +52,7 @@ description: "（第三人稱）在 Cursor 內以「單一對話編排＋虛擬�
 | 元件/表單/表格等單點優化 | Director + Designer + Review（必要時 DS） | 元件狀態與 API + a11y |
 | 設計系統建置/補洞 | Director + DS Owner + Review（必要時 Designer） | token/元件/命名/版本說明 |
 | Figma 檔案治理／file cleanup／整理 Figma 檔／清理圖層／命名與結構批次治理 | Director + DS Owner + Review（必要時 Designer） | 依 `figma-file-cleanup`：審計→策略→分批治理→驗證；變更清單／遷移映射／驗證／阻塞 + Director Final Pack |
-| 只要評審（design/code/prototype） | Director + Review（必要時 Designer） | Must/Should/Nice + AC |
+| 只要評審（design/code/prototype/Figma/live URL） | Director + Review（**必先讀 `uiux-review`**；必要時 Designer） | 依 `uiux-review` 7-step SOP：Reviewer Lens + Heuristic + Walkthrough + Strengths + Must/Should/Nice/Keep + AC |
 | 要做可點 Prototype | Director + Designer + Prototype + Review | 流轉圖 + hotspot + 測試腳本 |
 
 ### 固定順序（除非明確不需要）
@@ -63,6 +63,8 @@ Intake → Routing → Research（可選）→ Designer → Prototype（可選�
 
 ### 何時一定要載入既有技能
 
+- **涉及 Figma 設計出稿、Prototype 製作、或設計評審（design / prototype / Figma / live URL）**：**必須先讀** `~/.cursor/skills/ricky-design-guideline/SKILL.md`（Ricky Design Guideline / HKTVmall 王語錄設計原則）；各虛擬角色產出須對照其 R1–R9 原則與 Ricky Pass 檢查清單；Review 角色 Findings 須標注 `ricky:R{n}`
+- **涉及 UI/UX 評審（design / code / prototype / Figma / live URL；含「評審」「設計評審」「critique」「heuristic evaluation」「a11y review」「易用性檢查」等語意）**：**必須先讀** `~/.cursor/skills/uiux-review/SKILL.md`，再依其要求載入 `ui-ux-pro-max`（Heuristic Pass 對齊 Quick Reference §1–§10）；UIUX Review 角色之輸出**必須採用** `uiux-review` 的 7-step SOP 與 Findings 模板（Must/Should/Nice/Keep + AC），並使用該 skill 的預設 Reviewer Lens 或當次覆寫的 Lens；**同時執行** `ricky-design-guideline` 的 Ricky Pass
 - **涉及介面質感/可用性/a11y/互動規範**：必須讀 `~/.cursor/skills/ui-ux-pro-max/SKILL.md`
 - **涉及前端介面實作、元件/頁面 UI code、視覺呈現落地**：必須讀 `~/.cursor/skills/frontend-design/SKILL.md`
 - **涉及 Figma 讀設計稿/從 Figma 實作**：使用 `figma-implement-design` 的流程（必要時搭配 `figma-mcp-server-guide`）
@@ -85,7 +87,7 @@ Intake → Routing → Research（可選）→ Designer → Prototype（可選�
 - **問題定義**：一句話定義要解的問題（包含受眾 + 情境 + 目標）
 - **範圍與不做清單**：做什麼 / 不做什麼
 - **假設（待確認）**：最多 5 條
-- **決策原則**：3–7 條（可用性、a11y、品牌一致性、可實作性）
+- **決策原則**：3–7 條（可用性、a11y、品牌一致性、可實作性）；至少 3 條引用 `ricky-design-guideline` R1–R9 並標號
 - **里程碑**：草稿 → 定稿 → 交付（若有時程）
 
 ### 2) UX Researcher
@@ -124,12 +126,16 @@ Intake → Routing → Research（可選）→ Designer → Prototype（可選�
 
 ### 6) UIUX Review（Critic / QA）
 
-- **Must fix**：會造成阻塞/重大體驗問題（含理由與建議）
-- **Should fix**：強烈建議修（含理由與建議）
-- **Nice to have**：有加分但不阻塞
-- **可量化驗收清單（AC）**：可直接用來驗收的勾選清單
-- **a11y 檢查**：對比、焦點、鍵盤、ARIA/標籤、觸控目標
-- **一致性檢查**：字級/間距/元件狀態/語氣/圖示
+> 本表僅為摘要欄位；**實際執行必須依** `~/.cursor/skills/uiux-review/SKILL.md` 的 **7-step SOP**（Intake → Reviewer Lens → Heuristic Pass → Walkthrough → Strengths → Findings → Anti-nitpick + AC）與 Findings 模板。下列欄位是 Final Pack 中要呈現的最低集合：
+
+- **Reviewer Lens**：當次採用的代表使用者一段話（預設或覆寫）
+- **Must fix**：對 Lens 造成阻塞/a11y 違規/誤操作風險（含具體可落地方案 + `pro-max:<rule-key>` 對應）
+- **Should fix**：強烈建議修（同格式）
+- **Nice to have**：加分但不阻塞
+- **Keep（保留）**：設計得好應保留之處 + 為何有效
+- **可量化驗收清單（AC）**：對應 Must/Should 的勾選項；附「已符合一般標準（無需改動）」一行總結
+- **a11y 檢查**：對比、焦點、鍵盤、ARIA/標籤、觸控目標（對齊 `ui-ux-pro-max` §1）
+- **一致性檢查**：字級/間距/元件狀態/語氣/圖示（對齊 `ui-ux-pro-max` §4、§6）
 
 ## Director Final Pack（最後一定要輸出）
 
@@ -150,6 +156,7 @@ Intake → Routing → Research（可選）→ Designer → Prototype（可選�
 - DS Changes（若有）
 - Figma 檔案治理（若有）：變更清單、遷移映射、驗證清單、阻塞清單（格式與路徑依 `figma-file-cleanup`）
 - Review Report（必有）
+- Ricky Pass 檢查清單（Figma 設計 / Prototype / 評審時必有；格式見 `ricky-design-guideline`）
 
 ## 跨專案試跑（Pilot）與迭代方式
 
