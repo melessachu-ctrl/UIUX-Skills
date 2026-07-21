@@ -1,6 +1,6 @@
 ---
 name: uiux-design-studio
-description: "（第三人稱）在 Cursor 內以「單一對話編排＋虛擬角色」方式擔任 Design Director / 設計總監，將 UI/UX 工作拆成 intake → routing → 各角色輸出 → 最終統稿。適用於：新頁面/新功能設計、改版/視覺升級、UX 流程/使用者旅程/IA、可用性與無障礙（a11y/WCAG）、設計評審（design/code/prototype）、Figma 交付（screens/components/prototype）、Design System / token / component library 補洞或更新、Figma 檔案治理／cleanup（圖層／命名／舊檔 SOP）。會引導載入 `hktvmall-target-customers`（HKTVmall 目標客群／零售 UX 心智模型）、`ricky-design-guideline`（HKTVmall 設計原則）、`ui-ux-pro-max`（規範與品質）、`frontend-design`（視覺與實作導向）、以及 Figma 相關技能（figma-file-cleanup / figma-implement-design / figma-mcp-server-guide）。"
+description: "（第三人稱）在 Cursor 內以「單一對話編排＋虛擬角色」方式擔任 Design Director / 設計總監，將 UI/UX 工作拆成 intake → routing → 各角色輸出 → 最終統稿。適用於：新頁面/新功能設計、改版/視覺升級、UX 流程/使用者旅程/IA、可用性與無障礙（a11y/WCAG）、設計評審（design/code/prototype）、Figma 交付（screens/components/prototype）、Design System / token / component library 補洞或更新、Figma 檔案治理／cleanup（圖層／命名／舊檔 SOP）。HKTVmall 相關 Figma 設計預設套用 HKTVmall Design System（fileKey F0tjdruLjJTfWgmTeZKBnw）。會引導載入 `hktvmall-target-customers`（HKTVmall 目標客群／零售 UX 心智模型）、`ricky-design-guideline`（HKTVmall 設計原則）、`ui-ux-pro-max`（規範與品質）、`frontend-design`（視覺與實作導向）、以及 Figma 相關技能（figma-file-cleanup / figma-implement-design / figma-mcp-server-guide / apply-design-system）。"
 ---
 
 ## 平台現實（必讀）
@@ -26,7 +26,7 @@ description: "（第三人稱）在 Cursor 內以「單一對話編排＋虛擬�
 1. **目標與成功標準**：這次要提升什麼（轉換、留存、效率、信任、理解、可用性）？如何判定成功？
 2. **平台與範圍**：Web / iOS / Android / 桌面？要做哪些頁/元件/流程（列 1–5 個）？
 3. **受眾與情境**：主要使用者是誰？最常見的 1–2 個任務情境？
-4. **品牌與約束**：是否有既有品牌/Design System/元件庫/字體/色票？是否需要深色模式？
+4. **品牌與約束**：是否有既有品牌/Design System/元件庫/字體/色票？是否需要深色模式？（**HKTVmall 相關且未指定 DS 時，預設採用 HKTVmall Design System**，見下方「HKTVmall Design System 預設」）
 5. **技術與交付格式**：只要 Figma、還是要同時輸出工程可落地規格（token、元件 API、狀態、a11y）？
 6. **時程與風險**：截止時間？有哪些不可改的限制（法務、內容、資料來源、後端能力）？
 
@@ -68,6 +68,7 @@ Intake → Routing → Research（可選）→ Designer → Prototype（可選�
 - **涉及 UI/UX 評審（design / code / prototype / Figma / live URL；含「評審」「設計評審」「critique」「heuristic evaluation」「a11y review」「易用性檢查」等語意）**：**必須先讀** `~/.cursor/skills/uiux-review/SKILL.md`，再依其要求載入 `ui-ux-pro-max`（Heuristic Pass 對齊 Quick Reference §1–§10）；UIUX Review 角色之輸出**必須採用** `uiux-review` 的 7-step SOP 與 Findings 模板（Must/Should/Nice/Keep + AC），並使用該 skill 的預設 Reviewer Lens 或當次覆寫的 Lens；**同時執行** `ricky-design-guideline` 的 Ricky Pass
 - **涉及介面質感/可用性/a11y/互動規範**：必須讀 `~/.cursor/skills/ui-ux-pro-max/SKILL.md`
 - **涉及前端介面實作、元件/頁面 UI code、視覺呈現落地**：必須讀 `~/.cursor/skills/frontend-design/SKILL.md`
+- **涉及 HKTVmall Figma 設計出稿／Prototype／DS 對齊**：遵守「HKTVmall Design System 預設」；`search_design_system` 優先於從零繪製；必要時讀 `apply-design-system`
 - **涉及 Figma 讀設計稿/從 Figma 實作**：使用 `figma-implement-design` 的流程（必要時搭配 `figma-mcp-server-guide`）
 - **涉及 Figma 連線/授權/抓圖/節點**：必須讀 `~/.cursor/skills/figma-mcp-server-guide/SKILL.md`
 - **涉及 Figma 檔案治理／cleanup（與 `figma-file-cleanup` 對齊之觸發）**：**必須先讀** `~/.cursor/skills/figma-file-cleanup/SKILL.md`，再依其中 Phase A→D 與 Skills 聯動表鏈式載入 `figma-mcp-server-guide`、`figma-use`、`figma-generate-design` 等；虛擬角色固定為 **Director + DS Owner + Review（必要時 + Designer）**，產出須覆蓋該 skill 規定之交付物（變更清單、遷移映射、驗證、阻塞）。
@@ -82,6 +83,20 @@ Intake → Routing → Research（可選）→ Designer → Prototype（可選�
 - 已命中 `ricky-design-guideline` 載入條件（Figma 出稿／Prototype／設計評審）
 
 > HKTVmall 相關工作時，`hktvmall-target-customers` 與 `ricky-design-guideline` 通常**同時載入**：前者約束客群／KPI／零售 UX 取捨，後者約束設計原則（R1–R9）。
+
+#### HKTVmall Design System 預設（Figma 出稿必遵守）
+
+當任務符合上方「HKTVmall 觸發詞」且涉及 **Figma 設計出稿、Prototype、元件規格、或 DS 對齊** 時：
+
+1. **預設 DS**：若使用者未指定其他 design system，一律使用 **HKTVmall Design System**
+   - URL：https://www.figma.com/design/F0tjdruLjJTfWgmTeZKBnw/Design-System?node-id=11445-16121
+   - `fileKey`：`F0tjdruLjJTfWgmTeZKBnw`
+   - 預設入口 `nodeId`：`11445:16121`
+2. **Routing 後、角色產出前**：遵守使用者規則 `hktvmall-figma-design-system`；Figma 寫入前讀 `figma-use`；多區塊對齊讀 `apply-design-system`。
+3. **UIUX Designer / DS Owner 產出**：token、間距、字級、顏色、元件**必須**引用上述 DS；缺口列為「待新增／待盤點」，不得默默自創替代樣式。
+4. **Director Final Pack**：附錄須含 **DS 採用聲明**（名稱、fileKey、主要引用元件／token 或盤點阻塞）。
+
+> 規則詳見 `.cursor/rules/hktvmall-figma-design-system.mdc`（本 repo）；跨專案亦見 `~/.cursor/rules/hktvmall-figma-design-system.mdc`。
 
 #### `figma-file-cleanup` 觸發詞（與該 skill 之 `description` 對齊）
 
@@ -171,6 +186,7 @@ Intake → Routing → Research（可選）→ Designer → Prototype（可選�
 - Review Report（必有）
 - Ricky Pass 檢查清單（Figma 設計 / Prototype / 評審時必有；格式見 `ricky-design-guideline`）
 - Target Customer 對齊（HKTVmall 相關時必有）：segment 對應、KPI 取捨、推薦可解釋性（格式見 `hktvmall-target-customers`）
+- **DS 採用聲明**（HKTVmall Figma 相關時必有）：HKTVmall Design System、`fileKey`、主要引用元件／token 或盤點阻塞
 
 ## 跨專案試跑（Pilot）與迭代方式
 
