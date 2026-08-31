@@ -10,7 +10,8 @@ Melessa 團隊的 **Cursor Agent Skills 下游分發包**，供設計師在 Curs
 | --- | --- |
 | `skills/` | 11 個 UI/UX skills（由 Melessa 自動同步） |
 | `rules/` | HKTVmall / Lite App 跨專案 Cursor rules |
-| `scripts/install-skills.sh` | 一鍵 symlink 到 `~/.cursor/skills/` |
+| `scripts/install-skills.sh` | 一鍵 symlink 到 `~/.cursor/skills/`（首次安裝用） |
+| `scripts/update-skills.sh` | **更新用**：`git pull` + 重建 symlink（請用這個，不要只 pull） |
 | `docs/DEPENDENCIES.md` | 外部 plugin / MCP 依賴說明 |
 | `CHANGELOG.md` | 每次 sync 記錄 |
 
@@ -39,10 +40,19 @@ cp rules/*.mdc ~/.cursor/rules/
 
 ## 更新
 
+請用 **一條命令** 更新（不要只做 `git pull`）：
+
 ```bash
 cd UIUX-Skills
-git pull
-./scripts/install-skills.sh
+./scripts/update-skills.sh
+```
+
+這會自動執行 `git pull` + `install-skills.sh`，確保 symlink 仍指向正確路徑。
+
+若 `rules/` 有更新，可再執行：
+
+```bash
+cp rules/*.mdc ~/.cursor/rules/
 ```
 
 查看最新版本：打開 [CHANGELOG.md](CHANGELOG.md) 最上方一行。
@@ -80,5 +90,5 @@ Agent 會依 `uiux-design-studio` 的 intake → routing → 角色產出 → Di
 | 問題 | 解法 |
 | --- | --- |
 | Agent 找不到 `figma-use` | 確認 Figma MCP plugin 已啟用（見 DEPENDENCIES.md） |
-| Skill 沒更新 | `git pull` 後重跑 `./scripts/install-skills.sh` |
+| Skill 沒更新 | 跑 `./scripts/update-skills.sh`（不要只 `git pull`） |
 | Symlink 失效 | 用 `./scripts/install-skills.sh --force` 重建 |
