@@ -43,6 +43,10 @@ echo ""
 echo "==> install-skills.sh"
 bash "${SCRIPT_DIR}/install-skills.sh" "${INSTALL_ARGS[@]}"
 
+echo ""
+echo "==> export-rules-md.sh (keep .md twins in sync with .mdc)"
+bash "${SCRIPT_DIR}/export-rules-md.sh"
+
 if [[ -f "${REPO_ROOT}/CHANGELOG.md" ]]; then
   latest="$(awk 'NR>2 && /^- / { print; exit }' "${REPO_ROOT}/CHANGELOG.md")"
   if [[ -n "$latest" ]]; then

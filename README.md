@@ -9,11 +9,21 @@ Melessa 團隊的 **Cursor Agent Skills 下游分發包**，供設計師在 Curs
 | 路徑 | 說明 |
 | --- | --- |
 | `skills/` | 11 個 UI/UX skills（由 Melessa 自動同步） |
-| `rules/` | HKTVmall / Lite App 跨專案 Cursor rules |
+| `rules/` | HKTVmall / Lite App 跨專案 rules（**雙軌**：`.mdc` + 同內容 `.md`） |
 | `scripts/install-skills.sh` | 一鍵 symlink 到 `~/.cursor/skills/`（首次安裝用） |
-| `scripts/update-skills.sh` | **更新用**：`git pull` + 重建 symlink（請用這個，不要只 pull） |
+| `scripts/update-skills.sh` | **更新用**：`git pull` + 重建 symlink + 同步 rules `.md` |
+| `scripts/export-rules-md.sh` | 由 `.mdc` 重新產生同內容的 `.md`（規則雙軌） |
 | `docs/DEPENDENCIES.md` | 外部 plugin / MCP 依賴說明 |
 | `CHANGELOG.md` | 每次 sync 記錄 |
+
+### Rules 雙軌（`.mdc` / `.md`）
+
+| 格式 | 用途 |
+| --- | --- |
+| `*.mdc` | **Cursor** Project Rules（含 frontmatter；安裝到 `~/.cursor/rules/`） |
+| `*.md` | **同內容** portable 副本，供 ChatGPT／Codex／Claude／Spaces 等只接受 `.md` 的環境 |
+
+勿只改其中一邊；改 `.mdc` 後請跑 `./scripts/export-rules-md.sh`（`update-skills.sh` 也會跑）。Cursor **不要**只留 `.md`，否則 rules 系統不會載入。
 
 ## 前置條件
 
@@ -29,7 +39,7 @@ cd UIUX-Skills
 ./scripts/install-skills.sh
 ```
 
-安裝 Cursor rules（建議，HKTVmall / Lite App 工作時）：
+安裝 Cursor rules（建議，HKTVmall / Lite App 工作時）— **必須用 `.mdc`**：
 
 ```bash
 mkdir -p ~/.cursor/rules
@@ -38,6 +48,7 @@ cp rules/*.mdc ~/.cursor/rules/
 
 或只複製到特定專案的 `.cursor/rules/`。
 
+其他 agent／Spaces：直接讀或上傳 `rules/*.md`（與對應 `.mdc` 同內容）。
 ## 更新
 
 請用 **一條命令** 更新（不要只做 `git pull`）：

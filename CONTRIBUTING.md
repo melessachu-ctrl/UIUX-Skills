@@ -41,6 +41,14 @@ Melessa push 到 `main` 後，GitHub Actions 會自動 sync 到本 repo 的 `ski
 
 **不要**直接改 `skills/` 或 `rules/` 當真源——下次 sync 會覆蓋。
 
+## Rules 雙軌（`.mdc` + `.md`）
+
+`rules/` 與 `.cursor/rules/` 採雙軌：Cursor 用 `*.mdc`；另有同內容 `*.md`（portable／Spaces）。
+
+- 真源／編輯以 **`.mdc`** 為準
+- 改完後執行 `./scripts/export-rules-md.sh` 再生 `.md`（可用 `--check` 驗證是否漂移）
+- Melessa sync 若只更新 `.mdc`，下游 maintainer 應再 export 一次並 commit `.md`
+
 ## PR 檢查清單
 
 - [ ] 若改 skill 內容：是否已開／計劃開 Melessa PR？

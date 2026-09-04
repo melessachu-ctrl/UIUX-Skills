@@ -29,17 +29,20 @@
 
 ## 建議：Cursor Rules
 
-HKTVmall / Lite App 相關工作建議安裝本 repo `rules/`：
+HKTVmall / Lite App 相關工作建議安裝本 repo `rules/`（**Cursor 用 `.mdc`**）：
 
 ```bash
 cp rules/*.mdc ~/.cursor/rules/
 ```
 
-| Rule | 用途 |
+| Rule（雙軌：同名 `.mdc` + `.md`） | 用途 |
 | --- | --- |
-| `hktvmall-figma-design-system.mdc` | HKTVmall Figma DS 預設 |
-| `lite-app-figma-design-tokens.mdc` | Lite App 字體必須 link tokens |
+| `hktvmall-figma-design-system` | HKTVmall Figma DS 預設 |
+| `lite-app-figma-design-tokens` | Lite App 字體必須 link tokens |
 
+- **Cursor**：只安裝／引用 `*.mdc`（`*.md` 不會被 Project Rules 載入）。
+- **其他 agent／Spaces**：用同內容的 `*.md`。
+- 改完 `.mdc` 後跑 `./scripts/export-rules-md.sh`（或 `./scripts/update-skills.sh`）以保持雙軌一致。
 ## 本 repo 內 skills 依賴圖（摘要）
 
 ```
