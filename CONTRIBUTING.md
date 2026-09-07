@@ -46,8 +46,8 @@ Melessa push 到 `main` 後，GitHub Actions 會自動 sync 到本 repo 的 `ski
 `rules/` 與 `.cursor/rules/` 採雙軌：Cursor 用 `*.mdc`；另有同內容 `*.md`（portable／Spaces）。
 
 - 真源／編輯以 **`.mdc`** 為準
-- 改完後執行 `./scripts/export-rules-md.sh` 再生 `.md`（可用 `--check` 驗證是否漂移）
-- Melessa sync 若只更新 `.mdc`，下游 maintainer 應再 export 一次並 commit `.md`
+- 在本 repo 直接改 `.mdc`（含 `.cursor/rules/`）後，執行 `./scripts/export-rules-md.sh` 再生 `.md`（可用 `--check` 驗證是否漂移）
+- Melessa **Sync UIUX-Skills** 複製 `rules/*.mdc` 時會一併寫出同內容 `rules/*.md`，不必再為 Melessa sync 手工 export
 
 ## PR 檢查清單
 
