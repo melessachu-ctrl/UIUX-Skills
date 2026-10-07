@@ -1,5 +1,6 @@
 # Changelog
 
+- 2026-10-07 — Sync from Melessa @ ca9cc41 — rule:hktvmall-figma-design-system.mdc,rule:hktvmall-figma-design-system.md
 本檔案由 Melessa → UIUX-Skills 自動 sync 維護。每次 sync 在標題下方追加一行。
 
 - 2026-09-04 — Rules 雙軌：為 `rules/` 與 `.cursor/rules/` 的 `.mdc` 新增同內容 `.md`；新增 `scripts/export-rules-md.sh`，`update-skills.sh` 會一併執行
