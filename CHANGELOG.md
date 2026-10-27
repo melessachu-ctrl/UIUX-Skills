@@ -1,5 +1,6 @@
 # Changelog
 
+- 2026-10-27 — Sync from Melessa @ 842b7b5 — rule:marketing-buddy-ds.mdc,rule:marketing-buddy-ds.md
 - 2026-10-07 — Sync from Melessa @ ca9cc41 — rule:hktvmall-figma-design-system.mdc,rule:hktvmall-figma-design-system.md
 本檔案由 Melessa → UIUX-Skills 自動 sync 維護。每次 sync 在標題下方追加一行。
 
