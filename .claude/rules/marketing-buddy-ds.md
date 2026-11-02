@@ -1,0 +1,1 @@
+../../rules/marketing-buddy-ds.md

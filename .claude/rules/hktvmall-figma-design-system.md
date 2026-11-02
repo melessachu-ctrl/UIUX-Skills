@@ -1,0 +1,1 @@
+../../rules/hktvmall-figma-design-system.md
