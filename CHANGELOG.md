@@ -1,5 +1,6 @@
 # Changelog
 
+- 2026-11-16 — Sync from Melessa @ 3db7596 — uiux-design-studio,uiux-review,cro,offers,copywriting,copy-editing,hktvmall-target-customers,ricky-design-guideline,ui-ux-pro-max,apple-design,frontend-design,figma-mcp-server-guide,figma-file-cleanup,apply-design-system,audit-design-system,fix-design-system-finding,hktv-pm-spec-writer,rule:hktvmall-figma-design-system.mdc,rule:hktvmall-figma-design-system.md
 - 2026-11-13 — Sync from Melessa @ 4e1ec35 — uiux-design-studio,uiux-review,cro,offers,copywriting,copy-editing,hktvmall-target-customers,ricky-design-guideline,ui-ux-pro-max,apple-design,frontend-design,figma-mcp-server-guide,figma-file-cleanup,apply-design-system,audit-design-system,fix-design-system-finding,hktv-pm-spec-writer
 - 2026-11-02 — Sync from Melessa @ 134a8ab — rule:hktvmall-ui-price.mdc,rule:hktvmall-ui-price.md
 - 2026-10-27 — Sync from Melessa @ 842b7b5 — rule:marketing-buddy-ds.mdc,rule:marketing-buddy-ds.md
