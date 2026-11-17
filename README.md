@@ -8,7 +8,7 @@ Melessa 團隊的 **Cursor Agent Skills 下游分發包**，供設計師在 Curs
 
 | 路徑 | 說明 |
 | --- | --- |
-| `skills/` | 11 個 UI/UX skills（由 Melessa 自動同步） |
+| `skills/` | 21 個 skills（由 Melessa 自動同步），含 PM 的 `standardized-technical-prd`、`test-case-preparation`、`user-story-journey-mapper` |
 | `rules/` | HKTVmall / Lite App 跨專案 rules（**雙軌**：`.mdc` + 同內容 `.md`） |
 | `scripts/install-skills.sh` | 一鍵 symlink 到 `~/.cursor/skills/`（首次安裝用） |
 | `scripts/update-skills.sh` | **更新用**：`git pull` + 重建 symlink + 同步 rules `.md` |
